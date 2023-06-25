@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rb;
 
     public float moveSpeed;
+    public float runSpeed;
 
     public float groundDrag;
 
@@ -70,12 +71,20 @@ public class PlayerMovement : MonoBehaviour
 
         if (grounded)
         {
-            rb.AddForce(moveDir.normalized * moveSpeed * 7f, ForceMode.Force);
+            if(Input.GetKey(KeyCode.LeftShift))
+            {
+                rb.AddForce(moveDir.normalized * runSpeed * 7f, ForceMode.Force);
+            }
+
+            else
+            {
+                rb.AddForce(moveDir.normalized * moveSpeed * 7f, ForceMode.Force);
+            }
         }
 
         else if (jumped)
         {
-            rb.AddForce(moveDir.normalized * moveSpeed * 1f, ForceMode.Force);
+            rb.AddForce(moveDir.normalized * moveSpeed * 4f, ForceMode.Force);
         }
     }
 

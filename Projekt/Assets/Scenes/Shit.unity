@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -153,7 +153,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 674761807}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &160931888
 MonoBehaviour:
@@ -213,6 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f66243ec24ebc478b26cb1ec0b5dce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
 --- !u!65 &317967270
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -388,8 +389,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1266169288}
-  - {fileID: 1278328863}
   - {fileID: 1335193042}
   - {fileID: 971927236}
   - {fileID: 160931887}
@@ -820,7 +819,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 674761807}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &971927237
 MonoBehaviour:
@@ -1086,7 +1085,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 674761807}
+  m_Father: {fileID: 1335193042}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1278328862
@@ -1094,7 +1093,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 674761807}
+    m_TransformParent: {fileID: 1335193042}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 58607266841740e448de5fc2c1e394ce, type: 3}
       propertyPath: m_RootOrder
@@ -1195,9 +1194,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1266169288}
+  - {fileID: 1278328863}
   m_Father: {fileID: 674761807}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1335193043
 MonoBehaviour:
@@ -1211,7 +1212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2a4c61c93f287649b525cada3f46e14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pistolSound: {fileID: 8300000, guid: 7b4fb3de336e4d343bbdedb157824865, type: 3}
+  pistolSound: {fileID: 8300000, guid: 8228be183eb457645af3e87e803a9e95, type: 3}
   aS: {fileID: 806813836}
   range: 20
   damage: 5

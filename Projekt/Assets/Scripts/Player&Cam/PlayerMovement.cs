@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float playerHeight;
     public LayerMask whatIsGround;
-    bool grounded;
+    public bool grounded;
 
     public Transform orientation;
 
@@ -84,16 +84,16 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        else if (jumped)
+        else if (jumped && !grounded)
         {
-            rb.AddForce(moveDir.normalized * moveSpeed * 4f, ForceMode.Force);
+            rb.AddForce(moveDir.normalized * moveSpeed * 0.5f, ForceMode.Force);
         }
     }
 
     void Jump()
     {
         jumped = true;
-        rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        rb.velocity = new Vector3(rb.velocity.x / 2.5f, 0f, rb.velocity.z / 2.5f);
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
     }
 }

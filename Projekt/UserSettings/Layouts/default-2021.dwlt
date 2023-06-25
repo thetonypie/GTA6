@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 361
     height: 555
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -317,22 +317,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts/Player&Cam
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scripts/Player&Cam
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\prook\Documents\GitHub\GTA6\Projekt
+  m_LastProjectPath: C:\Users\antek\Desktop\GTA6\Projekt
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 0a5a0000
-    m_LastClickedID: 23050
-    m_ExpandedIDs: 000000000a5a00000c5a000000ca9a3bffffff7f
+    m_SelectedIDs: f85a0000
+    m_LastClickedID: 23288
+    m_ExpandedIDs: 00000000dc5a0000de5a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -360,7 +360,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000a5a00000c5a0000
+    m_ExpandedIDs: 00000000dc5a0000de5a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -387,7 +387,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -490,7 +490,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 38fbffff92570000985700009e570000c6570000
+      m_ExpandedIDs: 7cfaffff685800006e58000074580000aa580000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -772,9 +772,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.07680321, y: 1.8497539, z: -9.551359}
+    m_Target: {x: 4.4878373, y: 2.014569, z: 6.368399}
     speed: 2
-    m_Value: {x: 0.07680321, y: 1.8497539, z: -9.551359}
+    m_Value: {x: 4.4878373, y: 2.014569, z: 6.368399}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -808,7 +808,7 @@ MonoBehaviour:
         m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 1, y: 1}
+      m_Size: {x: 0.5, y: 0.5}
     zGrid:
       m_Fade:
         m_Target: 0
@@ -821,13 +821,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.0001441548, y: -0.9181272, z: 0.0002743959, w: -0.39620504}
+    m_Target: {x: -0.12973768, y: -0.17980686, z: 0.023889767, w: -0.97478145}
     speed: 2
-    m_Value: {x: -0.0007136916, y: -0.92399484, z: 0.0016625039, w: -0.3824007}
+    m_Value: {x: -0.13127606, y: -0.17685227, z: 0.023766516, w: -0.97515386}
   m_Size:
-    m_Target: 10
+    m_Target: 9.47288
     speed: 2
-    m_Value: 10
+    m_Value: 9.47288
   m_Ortho:
     m_Target: 0
     speed: 2

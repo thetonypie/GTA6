@@ -3,7 +3,6 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed = 10f;
-    public int damage = 10;
     public float lifetime = 2f;
 
     private float timer;
@@ -22,15 +21,5 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Enemy"))
-        {
-            other.GetComponent<Enemy>().AddDamage(damage);
-        }
-
-        Destroy(gameObject);
     }
 }

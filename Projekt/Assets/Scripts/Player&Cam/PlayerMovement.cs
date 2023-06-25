@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
 
     public bool jumped;
 
+    public Transform Camera;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();

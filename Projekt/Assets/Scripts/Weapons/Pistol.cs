@@ -5,6 +5,9 @@ using TMPro;
 
 public class Pistol : MonoBehaviour
 {
+    public AudioClip pistolSound;
+    public AudioSource aS;
+
     public float range;
     public int damage;
     public float fireRate;
@@ -20,6 +23,8 @@ public class Pistol : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
     public TextMeshProUGUI ammoText;
+
+    public GameObject bulletHole;
 
     void Awake()
     {
@@ -57,6 +62,7 @@ public class Pistol : MonoBehaviour
         {
             isShot = false;
             ammoClipLeft--;
+            aS.PlayOneShot(pistolSound);
 
             if (Physics.Raycast(ray, out hit, range))
             {
@@ -66,6 +72,8 @@ public class Pistol : MonoBehaviour
                 }
 
                 Debug.Log("Collided with " + hit.collider.gameObject.name);
+                Instantiate(bulletHole, hit.point, Quaternion.FromToRotation(Vector3.forward, hit.normal));
+                
             }
 
             // Spawn bullet prefab

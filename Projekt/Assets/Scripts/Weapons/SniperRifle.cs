@@ -30,6 +30,12 @@ public class SniperRifle : MonoBehaviour
     public float snipeZoomFOV; // Powiêkszenie pola widzenia podczas snajpowania
     private float originalFOV; // Oryginalne pole widzenia
 
+    public float shakeDuration = 0.1f; // Czas trzêsienia
+    public float shakeMagnitude = 0.1f; // Intensywnoœæ trzêsienia
+
+    private Vector3 originalPosition; // Oryginalna pozycja obiektu
+    private float shakeTimer = 0f; // Licznik czasu trzêsienia
+
     void Awake()
     {
         ammoLeft = ammoAmount;
@@ -37,6 +43,8 @@ public class SniperRifle : MonoBehaviour
         UpdateAmmoText();
 
         originalFOV = Camera.main.fieldOfView;
+
+        originalPosition = transform.localPosition; // Zapisanie oryginalnej pozycji obiektu
     }
 
     void Update()
@@ -94,6 +102,9 @@ public class SniperRifle : MonoBehaviour
 
             }
 
+            // Trzêsienie obiektu
+            StartCoroutine(Shake());
+
             // Spawn bullet prefab
             GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
             Destroy(bullet, 2f);
@@ -144,5 +155,21 @@ public class SniperRifle : MonoBehaviour
     void UpdateAmmoText()
     {
         ammoText.text = ammoClipLeft + " / " + ammoLeft;
+    }
+
+    IEnumerator Shake()
+    {
+        shakeTimer = shakeDuration; // Ustawienie czasu trzêsienia
+
+        while (shakeTimer > 0)
+        {
+            transform.localPosition = originalPosition + Random.insideUnitSphere * shakeMagnitude;
+
+            shakeTimer -= Time.deltaTime;
+
+            yield return null;
+        }
+
+        transform.localPosition = originalPosition; // Przywrócenie oryginalnej pozycji obiektu po zakoñczeniu trzêsienia
     }
 }
